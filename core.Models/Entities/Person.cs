@@ -55,8 +55,20 @@ namespace core.Models.Entities
         #endregion
 
 
-        public static Person Instance() {
-            return new Person();
-        } 
+        #region Singleton
+        
+        private static readonly Person instance = new Person();
+
+        private Person() { }
+
+        
+        public static Person Instance
+        {
+            get
+            {
+                return instance;
+            }
+        }
+        #endregion
     }
 }
