@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspnetCoreApplication", "aspnetCoreApplication\aspnetCoreApplication.csproj", "{6D3AAB3C-97E7-495C-A3E5-4A7257FB87CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvcApplication", "mvcApplication\mvcApplication.csproj", "{B865D566-37E3-4F6B-8FE2-05AD551CCDBD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D3AAB3C-97E7-495C-A3E5-4A7257FB87CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D3AAB3C-97E7-495C-A3E5-4A7257FB87CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D3AAB3C-97E7-495C-A3E5-4A7257FB87CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D3AAB3C-97E7-495C-A3E5-4A7257FB87CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B865D566-37E3-4F6B-8FE2-05AD551CCDBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B865D566-37E3-4F6B-8FE2-05AD551CCDBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B865D566-37E3-4F6B-8FE2-05AD551CCDBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B865D566-37E3-4F6B-8FE2-05AD551CCDBD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {635FE089-9E49-4E14-9625-70C5A0183CA7}
+	EndGlobalSection
+EndGlobal
