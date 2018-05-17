@@ -9,6 +9,11 @@ namespace core.Models.Entities
     /// </summary>
     public class Person
     {
+        /// <summary>
+        /// The propierities about this objets
+        /// </summary>
+        #region Propierities
+
         public int Id { get; set; }
         public string Name { get; set; }
         public string MiddleName { get; set; }
@@ -38,6 +43,15 @@ namespace core.Models.Entities
                 return Name + " " + MiddleName + " " + LastName;
             }
         }
+        #endregion
 
+        /// <summary>
+        /// All the navigation propierities
+        /// </summary>
+        #region Navigation
+
+        public virtual ICollection<Person> Friends { get; set; }
+
+        #endregion
     }
 }
