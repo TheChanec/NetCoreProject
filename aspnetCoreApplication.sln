@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvcApplication", "mvcApplication\mvcApplication.csproj", "{B865D566-37E3-4F6B-8FE2-05AD551CCDBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.FrontEnd", "mvcApplication\Core.FrontEnd.csproj", "{B865D566-37E3-4F6B-8FE2-05AD551CCDBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "core.Models", "core.Models\core.Models.csproj", "{1B2A7F61-5C9F-4276-AA04-8A7F94EA1C9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "core.Models", "core.Models\core.Models.csproj", "{1B2A7F61-5C9F-4276-AA04-8A7F94EA1C9C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
