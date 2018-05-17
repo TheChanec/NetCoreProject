@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+
 
 namespace core.Models.Entities
 {
@@ -53,5 +53,10 @@ namespace core.Models.Entities
         public virtual ICollection<Person> Friends { get; set; }
 
         #endregion
+
+
+        public static Person Instance() {
+            return new Person();
+        } 
     }
 }
