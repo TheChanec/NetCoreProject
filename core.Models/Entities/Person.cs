@@ -50,25 +50,28 @@ namespace core.Models.Entities
         /// </summary>
         #region Navigation
 
+        public TeamSport FavoriteSportTeam { get; set; }
+
         public virtual ICollection<Person> Friends { get; set; }
+        public Address Address { get; set; }
 
         #endregion
 
 
-        #region Singleton
-        
-        private static readonly Person instance = new Person();
+        //#region Singleton
 
-        private Person() { }
+        //private static readonly Person instance = new Person();
 
-        
-        public static Person Instance
-        {
-            get
-            {
-                return instance;
-            }
-        }
-        #endregion
+        //private Person() { }
+
+
+        //public static Person Instance
+        //{
+        //    get
+        //    {
+        //        return instance;
+        //    }
+        //}
+        //#endregion
     }
 }
