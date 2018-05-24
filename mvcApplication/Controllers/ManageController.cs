@@ -10,8 +10,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using mvcApplication.Models;
-using mvcApplication.Models.ManageViewModels;
+using Core.Models;
+using Core.Models.ManageViewModels;
 using mvcApplication.Services;
 
 namespace mvcApplication.Controllers
