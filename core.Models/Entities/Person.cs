@@ -63,7 +63,7 @@ namespace core.Models.Entities
         /// </summary>
         #region Navigation
 
-        public ApplicationUser ApplicationUser { get; set; }
+        //public ApplicationUser ApplicationUser { get; set; }
         public TeamSport FavoriteSportTeam { get; set; }
         public Address Address { get; set; }
         public virtual ICollection<Person> Friends { get; set; }

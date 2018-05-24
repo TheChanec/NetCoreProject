@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Core.Models.Entities.Migrations
+namespace Core.Models.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

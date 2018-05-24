@@ -1,4 +1,6 @@
 ﻿@using mvcApplication.Views.Manage
+@using Core.Models.Entities
+
 @inject SignInManager<ApplicationUser> SignInManager
 @{
     var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();

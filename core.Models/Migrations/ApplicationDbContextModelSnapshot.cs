@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Core.Models.Entities.Migrations
+namespace Core.Models.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -126,7 +126,7 @@ namespace Core.Models.Entities.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("Core.Models.ApplicationUser", b =>
+            modelBuilder.Entity("Core.Models.Entities.ApplicationUser", b =>
                 {
                     b.Property<string>("Id");
 
@@ -185,7 +185,7 @@ namespace Core.Models.Entities.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("Core.Models.ApplicationUser")
+                    b.HasOne("Core.Models.Entities.ApplicationUser")
                         .WithMany("Claims")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -193,7 +193,7 @@ namespace Core.Models.Entities.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("Core.Models.ApplicationUser")
+                    b.HasOne("Core.Models.Entities.ApplicationUser")
                         .WithMany("Logins")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -206,7 +206,7 @@ namespace Core.Models.Entities.Migrations
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("Core.Models.ApplicationUser")
+                    b.HasOne("Core.Models.Entities.ApplicationUser")
                         .WithMany("Roles")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
