@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Core.Models.Maps
+namespace Core.Models.Entities.Relations
 {
-    public class IdentityRoleMap
+    public class Friendship
     {
+
     }
 }

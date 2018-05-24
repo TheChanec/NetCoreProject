@@ -1,5 +1,6 @@
 ﻿using core.Models.Entities;
 using Core.Models.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -12,6 +13,7 @@ namespace Core.Models.Maps
     {
         public void Configure(EntityTypeBuilder<ApplicationUser> builder)
         {
+            builder.HasBaseType<IdentityUser>();
             builder.ToTable("Person");
             builder.HasKey(c => c.Id);
             builder.Property(c => c.Id).HasColumnName("Id").ValueGeneratedOnAdd();
