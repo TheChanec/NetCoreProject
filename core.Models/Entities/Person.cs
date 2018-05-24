@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Core.Models.Entities;
+using System;
 using System.Collections.Generic;
 
 
 namespace core.Models.Entities
 {
     /// <summary>
-    /// 
+    /// Entity Person whit the main propierities about the real person
     /// </summary>
     public class Person
     {
@@ -13,12 +14,15 @@ namespace core.Models.Entities
         /// The propierities about this objets
         /// </summary>
         #region Propierities
+            
+        private int _id;
+        private string _name;
+        private string _middleName;
+        private string _lastName;
+        private DateTime _birthday;
 
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string MiddleName { get; set; }
-        public string LastName { get; set; }
-        public DateTime Birthday { get; set; }
+
+
         public int Age
         {
             get
@@ -31,7 +35,8 @@ namespace core.Models.Entities
 
                     return age;
                 }
-                else {
+                else
+                {
                     return 0;
                 }
             }
@@ -43,7 +48,14 @@ namespace core.Models.Entities
                 return Name + " " + MiddleName + " " + LastName;
             }
         }
+        public DateTime Birthday { get => _birthday; set => _birthday = value; }
+        public string LastName { get => _lastName; set => _lastName = value; }
+        public string MiddleName { get => _middleName; set => _middleName = value; }
+        public string Name { get => _name; set => _name = value; }
+        
         #endregion
+
+
 
         /// <summary>
         /// All the navigation propierities
@@ -51,9 +63,9 @@ namespace core.Models.Entities
         #region Navigation
 
         public TeamSport FavoriteSportTeam { get; set; }
-
-        public virtual ICollection<Person> Friends { get; set; }
         public Address Address { get; set; }
+        public virtual ICollection<Person> Friends { get; set; }
+
 
         #endregion
 
