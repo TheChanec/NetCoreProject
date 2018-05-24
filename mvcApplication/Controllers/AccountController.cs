@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Core.Models;
 using mvcApplication.Services;
+using Core.Models.Entities;
 
 namespace mvcApplication.Controllers
 {

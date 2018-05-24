@@ -11,8 +11,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Core.Models;
-using Core.Models.ManageViewModels;
+using Core.Models.Entities.Views.ManageViewModels;
 using mvcApplication.Services;
+using Core.Models.Entities;
 
 namespace mvcApplication.Controllers
 {

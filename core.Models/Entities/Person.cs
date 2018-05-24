@@ -1,4 +1,5 @@
-﻿using Core.Models.Entities;
+﻿using Core.Models;
+using Core.Models.Entities;
 using System;
 using System.Collections.Generic;
 
@@ -14,7 +15,7 @@ namespace core.Models.Entities
         /// The propierities about this objets
         /// </summary>
         #region Propierities
-            
+
         private int _id;
         private string _name;
         private string _middleName;
@@ -52,7 +53,7 @@ namespace core.Models.Entities
         public string LastName { get => _lastName; set => _lastName = value; }
         public string MiddleName { get => _middleName; set => _middleName = value; }
         public string Name { get => _name; set => _name = value; }
-        
+
         #endregion
 
 
@@ -62,6 +63,7 @@ namespace core.Models.Entities
         /// </summary>
         #region Navigation
 
+        public ApplicationUser ApplicationUser { get; set; }
         public TeamSport FavoriteSportTeam { get; set; }
         public Address Address { get; set; }
         public virtual ICollection<Person> Friends { get; set; }

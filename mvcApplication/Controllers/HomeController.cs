@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Core.Models;
+using Core.Models.Entities.Views;
 
 namespace mvcApplication.Controllers
 {
