@@ -9,6 +9,6 @@ namespace Core.Models.Entities
     {
         public int Id { get; set; }
 
-        public Person PersonInThisAddress { get; set; }
+        public ApplicationUser PersonInThisAddress { get; set; }
     }
 }

@@ -15,7 +15,7 @@ namespace Core.Models.Entities
 
         #region navegations
 
-        public ICollection<Person> Members { get; set; }
+        //public ICollection<Person> Members { get; set; }
         
         #endregion
     }
