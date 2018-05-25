@@ -12,6 +12,7 @@ using Core.Models;
 using mvcApplication.Services;
 using Core.Models.Entities;
 using Core.Models.Contexts;
+using Core.FrontEnd.Services;
 
 namespace mvcApplication
 {
@@ -50,6 +51,8 @@ namespace mvcApplication
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationUserDbContext>()
                 .AddDefaultTokenProviders();
+
+            services.AddScoped<Microsoft.AspNetCore.Identity.IUserClaimsPrincipalFactory<ApplicationUser>, AppClaimsPrincipalFactory>();
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
