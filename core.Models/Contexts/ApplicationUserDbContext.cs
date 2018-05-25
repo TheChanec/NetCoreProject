@@ -29,9 +29,9 @@ namespace Core.Models.Contexts
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
 
-            builder.ApplyConfiguration(new ApplicationUserMap());
+            //builder.ApplyConfiguration(new ApplicationUserMap());
         }
 
-        public DbSet<ApplicationUser> Persons { get; set; }
+        //public DbSet<ApplicationUser> Persons { get; set; }
     }
 }

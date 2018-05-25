@@ -23,5 +23,24 @@ namespace Core.Models.AccountViewModels
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+        [DataType(DataType.Text)]
+        [Display(Name = "Name")]
+        public string Name { get; set; }
+        
+        
+        [DataType(DataType.Text)]
+        [Display(Name = "Middle Name")]
+        public string MiddleName { get; set; }
+
+        [DataType(DataType.Text)]
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
+
+        [DataType(DataType.Date)]
+        [Display(Name = "Birthday")]
+        public string BirthDay { get; set; }
     }
 }
