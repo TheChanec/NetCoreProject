@@ -13,14 +13,16 @@ namespace Core.Models.Entities
     /// </summary>
     public class ApplicationUser : IdentityUser
     {
-        
-        /// <summary>
-        /// The propierities about this objets
-        /// </summary>
+        private string _name;
+        private string _middleName;
+        private string _lastName;
+        private DateTime _birthday;
+
         #region Propierities
 
-        [Key]
-        public int UserId { get; set; }
+        /// <summary>
+        /// Propierity only read for calculete Age of the date birthday
+        /// </summary>
         public int Age
         {
             get
@@ -39,6 +41,10 @@ namespace Core.Models.Entities
                 }
             }
         }
+
+        /// <summary>
+        /// Propierity only read for get the Full Name abouth the user
+        /// </summary>
         public string FullName
         {
             get
@@ -46,22 +52,29 @@ namespace Core.Models.Entities
                 return Name + " " + MiddleName + " " + LastName;
             }
         }
-        public DateTime Birthday { get; set; }
-        public string LastName { get; set; }
-        public string MiddleName { get; set; }
-        public string Name { get; set; }
-        public string IdApplicationUser { get; set; }
-
-        #endregion
-
-
 
         /// <summary>
-        /// All the navigation propierities
+        /// 
         /// </summary>
-        #region Navigation
+        public DateTime Birthday { get => _birthday; set => _birthday = value; }
 
-        
+        /// <summary>
+        /// 
+        /// </summary>
+        public string LastName { get => _lastName; set => _lastName = value; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string MiddleName { get => _middleName; set=> _middleName= value; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Name { get => _name; set => _name = value; }
+        #endregion
+
+        #region Navigation
         //public Address Address { get; set; }
         public virtual ICollection<ApplicationUser> Friends { get; set; }
 

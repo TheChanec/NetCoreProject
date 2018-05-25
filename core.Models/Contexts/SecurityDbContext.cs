@@ -13,10 +13,18 @@ namespace Core.Models.Contexts
 {
     public class ApplicationUserDbContext : IdentityDbContext<ApplicationUser>
     {
+        private static bool _created = false;
         public ApplicationUserDbContext(DbContextOptions<ApplicationUserDbContext> options)
             : base(options)
         {
-            
+            // Create the database and schema if it doesn't exist
+            // This is a temporary workaround to create database until Entity Framework database migrations
+            // are supported in ASP.NET Core
+            if (!_created)
+            {
+                Database.Migrate();//.ApplyMigrations();
+                _created = true;
+            }
 
         }
 
@@ -28,10 +36,9 @@ namespace Core.Models.Contexts
             // Customize the ASP.NET Identity model and override the defaults if needed.
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
-
-            //builder.ApplyConfiguration(new ApplicationUserMap());
+            builder.ApplyConfiguration(new ApplicationUserMap());
         }
 
-        //public DbSet<ApplicationUser> Persons { get; set; }
+        public DbSet<ApplicationUser> Persons { get; set; }
     }
 }
