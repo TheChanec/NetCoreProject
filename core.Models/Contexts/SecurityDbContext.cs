@@ -11,10 +11,10 @@ using core.Models.Entities;
 
 namespace Core.Models.Contexts
 {
-    public class ApplicationUserDbContext : IdentityDbContext<ApplicationUser>
+    public class SecurityDbContext : IdentityDbContext<ApplicationUser>
     {
         private static bool _created = false;
-        public ApplicationUserDbContext(DbContextOptions<ApplicationUserDbContext> options)
+        public SecurityDbContext(DbContextOptions<SecurityDbContext> options)
             : base(options)
         {
             // Create the database and schema if it doesn't exist

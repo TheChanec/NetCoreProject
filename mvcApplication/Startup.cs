@@ -39,7 +39,7 @@ namespace mvcApplication
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddDbContext<ApplicationUserDbContext>(options =>
+            services.AddDbContext<SecurityDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection"),
                     b => b.MigrationsAssembly("Core.FrontEnd")
@@ -49,7 +49,7 @@ namespace mvcApplication
 
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationUserDbContext>()
+                .AddEntityFrameworkStores<SecurityDbContext>()
                 .AddDefaultTokenProviders();
 
             services.Configure<IdentityOptions>(options =>
