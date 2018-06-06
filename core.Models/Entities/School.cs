@@ -9,11 +9,12 @@ namespace Core.Models.Entities
         private string _name;
         private string _slogan;
         private DateTime _beging;
-        private Address _adress;
+
+        //private Address _adress;
 
 
-        private ICollection<ApplicationUser> _students;
-        private ICollection<ApplicationUser> _workers;
+        //private ICollection<ApplicationUser> _students;
+        //private ICollection<ApplicationUser> _workers;
         
 
 
