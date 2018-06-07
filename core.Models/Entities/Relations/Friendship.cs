@@ -11,8 +11,8 @@ namespace Core.Models.Entities.Relations
         private string _idReceiving;
         private DateTime _date;
         private bool _active;
-        private ApplicationUser requesting;
-        private ApplicationUser receiving;
+        private Person requesting;
+        private Person receiving;
 
 
 
@@ -25,7 +25,7 @@ namespace Core.Models.Entities.Relations
 
 
 
-        public ApplicationUser Requesting { get => requesting; set => requesting = value; }
-        public ApplicationUser Receiving { get => receiving; set => receiving = value; }    
+        public Person Requesting { get => requesting; set => requesting = value; }
+        public Person Receiving { get => receiving; set => receiving = value; }    
     }
 }

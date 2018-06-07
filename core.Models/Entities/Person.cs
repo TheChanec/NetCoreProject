@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using core.Models.Entities;
+using Core.Models.Entities.Relations;
 using Microsoft.AspNetCore.Identity;
 
 namespace Core.Models.Entities
@@ -11,7 +12,7 @@ namespace Core.Models.Entities
     /// <summary>
     /// Add profile data for application users by adding properties to the ApplicationUser class
     /// </summary>
-    public class ApplicationUser : IdentityUser
+    public class Person : IdentityUser
     {
         private string _name;
         private string _middleName;
@@ -76,7 +77,13 @@ namespace Core.Models.Entities
 
         #region Navigation
         //public Address Address { get; set; }
-        public virtual ICollection<ApplicationUser> Friends { get; set; }
+
+        /// <summary>
+        /// List of friends for each one User Apllication
+        /// </summary>
+        public virtual ICollection<Friendship> FriendsReceiving { get; set; }
+
+        public virtual ICollection<Friendship> FriendsRequesting { get; set; }
 
 
         #endregion

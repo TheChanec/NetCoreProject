@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 
 namespace Core.FrontEnd.Services
 {
-    public class AppClaimsPrincipalFactory : UserClaimsPrincipalFactory<ApplicationUser, IdentityRole>
+    public class AppClaimsPrincipalFactory : UserClaimsPrincipalFactory<Person, IdentityRole>
     {
         public AppClaimsPrincipalFactory(
-            UserManager<ApplicationUser> userManager
+            UserManager<Person> userManager
             , RoleManager<IdentityRole> roleManager
             , IOptions<IdentityOptions> optionsAccessor)
         : base(userManager, roleManager, optionsAccessor)
         { }
 
-        public async override Task<ClaimsPrincipal> CreateAsync(ApplicationUser user)
+        public async override Task<ClaimsPrincipal> CreateAsync(Person user)
         {
             var principal = await base.CreateAsync(user);
 

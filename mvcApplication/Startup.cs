@@ -48,7 +48,7 @@ namespace mvcApplication
 
 
 
-            services.AddIdentity<ApplicationUser, IdentityRole>()
+            services.AddIdentity<Person, IdentityRole>()
                 .AddEntityFrameworkStores<SecurityDbContext>()
                 .AddDefaultTokenProviders();
 
@@ -86,7 +86,7 @@ namespace mvcApplication
             });
 
 
-            services.AddScoped<Microsoft.AspNetCore.Identity.IUserClaimsPrincipalFactory<ApplicationUser>, AppClaimsPrincipalFactory>();
+            services.AddScoped<Microsoft.AspNetCore.Identity.IUserClaimsPrincipalFactory<Person>, AppClaimsPrincipalFactory>();
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();

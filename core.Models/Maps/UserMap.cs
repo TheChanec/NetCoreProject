@@ -9,9 +9,9 @@ using System.Text;
 
 namespace Core.Models.Maps
 {
-    internal class ApplicationUserMap : IEntityTypeConfiguration<ApplicationUser>
+    internal class ApplicationUserMap : IEntityTypeConfiguration<Person>
     {
-        public void Configure(EntityTypeBuilder<ApplicationUser> builder)
+        public void Configure(EntityTypeBuilder<Person> builder)
         {
             //builder.HasBaseType<IdentityUser>();
             builder.ToTable(name: "AspNetUser", schema: "Security");
