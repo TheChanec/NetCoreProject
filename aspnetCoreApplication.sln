@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.FrontEnd", "mvcApplica
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Models", "core.Models\Core.Models.csproj", "{1B2A7F61-5C9F-4276-AA04-8A7F94EA1C9C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "core.Services", "core.Security\core.Services.csproj", "{0DB6516E-EA44-4F42-83C8-5F2BDE9F6E68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Services", "core.Security\Core.Services.csproj", "{0DB6516E-EA44-4F42-83C8-5F2BDE9F6E68}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "apiexample", "apiexample\apiexample.csproj", "{902E4E22-B8E1-4DD1-8472-00378DEAF027}"
 EndProject
