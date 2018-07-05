@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace Core.Models.Entities
 {
+    /// <inheritdoc />
     /// <summary>
     /// Add profile data for application users by adding properties to the ApplicationUser class
     /// </summary>
@@ -28,18 +29,11 @@ namespace Core.Models.Entities
         {
             get
             {
-                if (Birthday != null)
-                {
-                    DateTime now = DateTime.Today;
-                    int age = now.Year - Birthday.Year;
-                    if (now < Birthday.AddYears(age)) age--;
+                DateTime now = DateTime.Today;
+                int age = now.Year - Birthday.Year;
+                if (now < Birthday.AddYears(age)) age--;
 
-                    return age;
-                }
-                else
-                {
-                    return 0;
-                }
+                return age;
             }
         }
 
@@ -57,7 +51,7 @@ namespace Core.Models.Entities
         /// <summary>
         /// 
         /// </summary>
-        public DateTime Birthday { get => _birthday; set => _birthday = value; }
+        public virtual DateTime Birthday { get => _birthday; set => _birthday = value; }
 
         /// <summary>
         /// 
@@ -67,7 +61,7 @@ namespace Core.Models.Entities
         /// <summary>
         /// 
         /// </summary>
-        public string MiddleName { get => _middleName; set=> _middleName= value; }
+        public string MiddleName { get => _middleName; set => _middleName = value; }
 
         /// <summary>
         /// 
@@ -76,7 +70,7 @@ namespace Core.Models.Entities
         #endregion
 
         #region Navigation
-        //public Address Address { get; set; }
+        
 
         /// <summary>
         /// List of friends for each one User Apllication
@@ -88,21 +82,5 @@ namespace Core.Models.Entities
 
         #endregion
 
-
-        //#region Singleton
-
-        //private static readonly Person instance = new Person();
-
-        //private Person() { }
-
-
-        //public static Person Instance
-        //{
-        //    get
-        //    {
-        //        return instance;
-        //    }
-        //}
-        //#endregion
     }
 }

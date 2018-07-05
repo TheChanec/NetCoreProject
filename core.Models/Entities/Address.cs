@@ -7,8 +7,12 @@ namespace Core.Models.Entities
 {
     public class Address
     {
-        public int Id { get; set; }
 
+
+
+        public int Id { get; set; }
+        
         public Person PersonInThisAddress { get; set; }
+        
     }
 }

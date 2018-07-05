@@ -1,22 +1,37 @@
-﻿using core.Models.Entities;
-
-using System.Collections.Generic;
-
-
-namespace Core.Models.Entities
+﻿namespace Core.Models.Entities
 {
+    public enum Color
+    {
+        White,
+        Red,
+        Green,
+        Blue
+    }
+
     public class Team
     {
-
-        #region propierities
-        public int Id { get; set; }
         public string Name { get; set; }
-        #endregion
 
-        #region navegations
+        public string NickName { get; set; }
 
-        //public ICollection<Person> Members { get; set; }
-        
-        #endregion
+        public Color ShirtColor { get; set; }
+
+        public string HomeTown { get; set; }
+
+        public string Ground { get; set; }
+
+        public Team(
+            string name,
+            string nickName,
+            Color shirtColor,
+            string homeTown,
+            string ground)
+        {
+            Name = name;
+            NickName = nickName;
+            ShirtColor = shirtColor;
+            HomeTown = homeTown;
+            Ground = ground;
+        }
     }
 }
