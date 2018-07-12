@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
-using core.Models.Entities;
-using Core.Models.Entities.Relations;
+﻿using Core.Models.Entities.Relations;
 using Microsoft.AspNetCore.Identity;
+using System;
+using System.Collections.Generic;
 
 namespace Core.Models.Entities
 {

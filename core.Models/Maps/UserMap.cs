@@ -1,17 +1,11 @@
-﻿using core.Models.Entities;
-using Core.Models.Entities;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Core.Models.Maps
 {
-    internal class ApplicationUserMap : IEntityTypeConfiguration<Person>
+    internal class ApplicationUserMap : IEntityTypeConfiguration<Entities.Person>
     {
-        public void Configure(EntityTypeBuilder<Person> builder)
+        public void Configure(EntityTypeBuilder<Entities.Person> builder)
         {
             //builder.HasBaseType<IdentityUser>();
             builder.ToTable(name: "AspNetUser", schema: "Security");

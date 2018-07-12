@@ -1,20 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Core.FrontEnd.Services;
+using Core.Models.Contexts;
+using Core.Models.Entities;
+using mvcApplication.Services;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Core.Models;
-using mvcApplication.Services;
-using Core.Models.Entities;
-using Core.Models.Contexts;
-using Core.FrontEnd.Services;
 
-namespace mvcApplication
+namespace Core.FrontEnd
 {
     public class Startup
     {
@@ -38,6 +34,7 @@ namespace mvcApplication
         /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton(_ => Configuration);
 
             services.AddDbContext<SecurityDbContext>(options =>
                 options.UseSqlServer(

@@ -1,21 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Core.Models.AccountViewModels;
+using Core.Models.Entities;
+using mvcApplication.Controllers;
+using mvcApplication.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using Core.Models;
-using mvcApplication.Services;
-using Core.Models.Entities;
 
-namespace mvcApplication.Controllers
+namespace Core.WebApplication.Controllers
 {
     [Authorize]
     [Route("[controller]/[action]")]
