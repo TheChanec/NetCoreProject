@@ -38,7 +38,7 @@ namespace Core.FrontEnd
 
             services.AddDbContext<SecurityDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection"),
+                    Configuration.GetConnectionString("SQLConnection"),
                     b => b.MigrationsAssembly("Core.FrontEnd")
                     )
                );
